@@ -4,6 +4,7 @@ using entityCodeFirst.Repo;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,30 +25,35 @@ namespace entityCodeFirst.Controllers
             _logger = logger;
             _context = context;
              prM = new PersonMeth(context);
+
         }
 
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("user") is not null)
+            {
+                return NotFound();
+            }
             tete = "Login";
-            List<Person> myData = _context.Persons.ToList();
-            ViewBag.Persons = myData;
             
-            ViewBag.Pers = prM.trier(myData.ToArray());
             return View();
         }
         public IActionResult Login()
         {
+           
             string Email = Request.Form["email"];
             string Mdp = Request.Form["mdp"];
 
             if (prM.Auth(Email, Mdp) is null)
             {
-                return Redirect("Login");
+                return Redirect("Index");
             }
-            else
-                ViewBag.email = "misy";
-            HttpContext.Session.SetString("user", "julio@gmail.com");
-            return View("privacy");
+            Person user = prM.Auth(Email, Mdp);
+            HttpContext.Session.SetString("email", Email);
+            HttpContext.Session.SetString("mdp", Mdp);
+            var objet = JsonConvert.SerializeObject(user);
+            HttpContext.Session.SetString("user", objet);
+            return Redirect("https://localhost:44370/user");
         }
         public IActionResult Privacy()
         {
@@ -57,6 +63,10 @@ namespace entityCodeFirst.Controllers
         }
         public IActionResult Insc()
         {
+            if (HttpContext.Session.GetString("user") is not null)
+            {
+                return NotFound();
+            }
             tete = "inscription";
             return View();
         }

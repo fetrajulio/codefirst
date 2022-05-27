@@ -57,3 +57,5 @@ C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\obj\D
 C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\obj\Debug\net5.0\entityCodeFirst.genruntimeconfig.cache
 C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\obj\Debug\net5.0\ref\entityCodeFirst.dll
 C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\obj\Debug\net5.0\Razor\Views\Home\Insc.cshtml.g.cs
+C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\IdealyRakotoarimanan\source\repos\entityCodeFirst\entityCodeFirst\obj\Debug\net5.0\Razor\Views\User\IndexUser.cshtml.g.cs

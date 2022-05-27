@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U3XiVaW1rC5MIX8hgI7Ygx+p7tmEKt6SJpkENFmCy50gggXP1oi62fwMSjHjUINC1UONFRPEuvIJ0IjKnmo4bQ==",
+  "dgSpecHash": "53w4gZu8dwyMf8O44FgwA/0iX+YDM+d2zSBTNY1oI7WE4TuIT63YEHvoy/d38uJBnTG019Eufu9rf0meNRKSoQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\IdealyRakotoarimanan\\source\\repos\\entityCodeFirst\\entityCodeFirst\\entityCodeFirst.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\mysql.data\\8.0.24\\mysql.data.8.0.24.nupkg.sha512",
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\mysql.entityframeworkcore\\5.0.3\\mysql.entityframeworkcore.5.0.3.nupkg.sha512",
+    "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\IdealyRakotoarimanan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
