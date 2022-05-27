@@ -31,11 +31,24 @@ namespace entityCodeFirst.Controllers
             tete = "Login";
             List<Person> myData = _context.Persons.ToList();
             ViewBag.Persons = myData;
-            HttpContext.Session.SetString("bema", "julio@gmail.com");
+            
             ViewBag.Pers = prM.trier(myData.ToArray());
             return View();
         }
+        public IActionResult Login()
+        {
+            string Email = Request.Form["email"];
+            string Mdp = Request.Form["mdp"];
 
+            if (prM.Auth(Email, Mdp) is null)
+            {
+                return Redirect("Login");
+            }
+            else
+                ViewBag.email = "misy";
+            HttpContext.Session.SetString("user", "julio@gmail.com");
+            return View("privacy");
+        }
         public IActionResult Privacy()
         {
             tete = "Prive";
@@ -46,6 +59,17 @@ namespace entityCodeFirst.Controllers
         {
             tete = "inscription";
             return View();
+        }
+        public IActionResult ValideInscription()
+        {
+            string email= Request.Form["email"];
+            string mdp= Request.Form["mdp"];
+            string name = Request.Form["nom"];
+            int age = int.Parse(Request.Form["age"]);
+            int idClasse = int.Parse(Request.Form["classe"]);
+
+            prM.Ajout(new Person(name,age,email,mdp,idClasse));
+            return Redirect("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using entityCodeFirst.Data;
 
-namespace entityCodeFirst.Migrations
+namespace entityCodeFirst.Migrations.ClasseDb
 {
-    [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ClasseDbContext))]
+    partial class ClasseDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -16,30 +16,21 @@ namespace entityCodeFirst.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("entityCodeFirst.Models.Person", b =>
+            modelBuilder.Entity("entityCodeFirst.Models.Classe", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("IdClasse")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
+                    b.Property<string>("Departement")
                         .HasColumnType("text");
 
-                    b.Property<int>("IdClasse")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
+                    b.Property<string>("NameClasse")
                         .HasColumnType("text");
 
-                    b.Property<string>("Pass")
-                        .HasColumnType("text");
+                    b.HasKey("IdClasse");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Persons");
+                    b.ToTable("Classes");
                 });
 #pragma warning restore 612, 618
         }

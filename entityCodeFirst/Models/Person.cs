@@ -9,14 +9,26 @@
 
         public string Pass { get; set; }
 
-        public Person (int id, string name, int age, string email, string pass)
+        public int IdClasse { get; set; }
+
+        public Person (int id, string name, int age, string email, string pass, int idClasse)
         {
             Id = id;
             Name = name;
             Age = age;
             Email = email;
             Pass = pass;
+            IdClasse = idClasse;
+        }
+        public Person(string name, int age, string email, string pass, int idClasse)
+        {
+            Name = name;
+            Age = age;
+            Email = email;
+            Pass = pass;
+            IdClasse = idClasse;
         }
         public Person() { }
+      
     }
 }

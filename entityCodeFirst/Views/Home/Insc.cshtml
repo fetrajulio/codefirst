@@ -9,15 +9,37 @@
         <div class="card text-white bg-primary mb-3">
           <div class="card-header">Inscription</div>
           <div class="card-body">
-               <div class="form-group">
+              <form method="post" action="https://localhost:44370/home/ValideInscription">
+                  <div class="form-group">
                   <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input name="mdp" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
+                <div class="form-group">
+                  <label class="col-form-label mt-4" for="inputDefault"> Nom</label>
+                  <input name="nom"type="text" class="form-control" placeholder="Nom" id="inputDefault">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label mt-4" for="inputDefault">Age</label>
+                  <input name="age"type="text" class="form-control" placeholder="Age" id="inputDefault">
+                </div>
+                 <div class="form-group">
+                  <label for="exampleSelect1" class="form-label mt-4">Departement</label>
+                  <select name="classe"class="form-select" id="exampleSelect1">
+                    <option value="11">ESIIA</option>
+                    <option value="12">ISAIA</option>
+                    <option value="13">IGGL</option>
+                    <option value="14">IMTICIA</option>
+                    
+                  </select>
+                </div>
+               <button type="submit" class="btn btn-primary">Primary</button>
+              </form>
+                
           </div>
         </div>
     </div>

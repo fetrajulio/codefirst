@@ -12,6 +12,12 @@ namespace entityCodeFirst.Repo
         {
             _context = context;
         }
+        public Person Auth(string email,string mdp)
+        {
+            Person p = _context.Persons.FirstOrDefault(x => x.Email==email && x.Pass==mdp);
+
+            return p;
+        }
         public void Ajout(Person p)
         {
 
