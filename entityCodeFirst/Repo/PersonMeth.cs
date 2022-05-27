@@ -12,6 +12,19 @@ namespace entityCodeFirst.Repo
         {
             _context = context;
         }
+        public void Connected(Person P)
+        {
+            
+            Person p = _context.Persons.FirstOrDefault(x => x.Id == P.Id);
+            p.Connect = 1;
+            _context.SaveChanges();
+        }
+        public void Deconect(Person P)
+        {
+            Person p = _context.Persons.FirstOrDefault(x => x.Id == P.Id);
+            p.Connect = 0;
+            _context.SaveChanges();
+        }
         public Person Auth(string email,string mdp)
         {
             Person p = _context.Persons.FirstOrDefault(x => x.Email==email && x.Pass==mdp);

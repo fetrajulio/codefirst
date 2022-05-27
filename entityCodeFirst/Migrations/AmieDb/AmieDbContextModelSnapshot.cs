@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using entityCodeFirst.Data;
 
-namespace entityCodeFirst.Migrations
+namespace entityCodeFirst.Migrations.AmieDb
 {
-    [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AmieDbContext))]
+    partial class AmieDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -16,33 +16,21 @@ namespace entityCodeFirst.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("entityCodeFirst.Models.Person", b =>
+            modelBuilder.Entity("entityCodeFirst.Models.Amie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Age")
+                    b.Property<int>("IdP1")
                         .HasColumnType("int");
 
-                    b.Property<int>("Connect")
+                    b.Property<int>("IdP2")
                         .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<int>("IdClasse")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Pass")
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons");
+                    b.ToTable("Amis");
                 });
 #pragma warning restore 612, 618
         }

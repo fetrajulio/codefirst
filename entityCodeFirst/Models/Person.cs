@@ -10,6 +10,7 @@
         public string Pass { get; set; }
 
         public int IdClasse { get; set; }
+        public int Connect { get; set; }
 
         public Person (int id, string name, int age, string email, string pass, int idClasse)
         {
@@ -19,6 +20,7 @@
             Email = email;
             Pass = pass;
             IdClasse = idClasse;
+           
         }
         public Person(string name, int age, string email, string pass, int idClasse)
         {

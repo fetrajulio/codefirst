@@ -26,6 +26,7 @@ namespace entityCodeFirst
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<AmieDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
             services.AddDbContext<ClasseDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();

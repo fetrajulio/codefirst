@@ -4,4 +4,9 @@
 @{
 }
 <p>@ViewBag.User.Name</p>
- <input type="button" class="btn btn-secondary" onclick="location.href='https://localhost:44370/user/deconect';" value="Deconecter" />
+@foreach(Person p in ViewBag.amies)
+{
+    <p>@p.Name</p>
+    <br />
+}
+<input type="button" class="btn btn-secondary" onclick="location.href='https://localhost:44370/user/deconect';" value="Deconecter" />
